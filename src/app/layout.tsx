@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
           {children}
         </ThemeProvider>
       </body>
